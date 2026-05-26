@@ -13,16 +13,26 @@ const categories = [
 
 const questions = [
   {
-    category: "appearance",
+    category: "manners",
+    label: "名刺交換",
     points: 5,
-    text: "初対面の取引先を訪問する日の服装として、最も適切なのはどれですか？",
-    options: ["清潔感があり、場に合った服装にする", "普段どおりでよいので、しわは気にしない", "目立つことを優先して派手にする"],
+    text: "正しい名刺交換の方法は？",
+    options: [
+      "自己紹介をして相手に合わせた位置で渡す",
+      "「頂戴いたします」と言い、相手より低い位置で受け取る",
+      "「はい！」と手を挙げ元気よく返事をしてから自分の名前を言う",
+    ],
   },
   {
-    category: "appearance",
+    category: "excel",
+    label: "PC作業",
     points: 5,
-    text: "オンライン会議前の身だしなみ確認で、最も大切な行動はどれですか？",
-    options: ["表情、背景、音声、服装を事前に確認する", "カメラを使わないので準備しない", "会議が始まってから環境を整える"],
+    text: "パソコンを起動するのに必要なことは？",
+    options: [
+      "電源や配線を正しく接続できているか確認する",
+      "パソコンを叩いて起動させる",
+      "ログインして周辺機器を用意する",
+    ],
   },
   {
     category: "language",
@@ -215,7 +225,7 @@ function renderQuestion() {
 
   progressText.textContent = `${currentQuestion + 1} / ${activeQuestions.length}`;
   progressBar.style.width = `${((currentQuestion + 1) / activeQuestions.length) * 100}%`;
-  categoryName.textContent = category.name;
+  categoryName.textContent = question.label || category.name;
   questionPoints.textContent = `${question.points}点`;
   questionText.textContent = question.text;
   currentScore.textContent = "診断中";

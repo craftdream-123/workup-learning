@@ -468,47 +468,84 @@ h1 {
 @media (max-width: 640px) {
   .app-shell,
   .result-view {
-    width: min(100% - 20px, 1000px);
-    margin: 10px auto;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .quiz-panel,
   .sheet {
-    padding: 18px;
+    padding: 12px;
   }
 
   h1 {
-    font-size: 1.65rem;
+    margin-bottom: 6px;
+    font-size: 1.45rem;
   }
 
   .app-header {
     display: grid;
+    gap: 10px;
+  }
+
+  .lead {
+    font-size: 0.82rem;
+    line-height: 1.45;
   }
 
   .score-chip {
     width: 100%;
-    min-height: 82px;
+    min-height: 52px;
     grid-template-columns: 1fr auto;
-    padding: 0 18px;
+    padding: 0 12px;
+  }
+
+  .score-chip strong {
+    font-size: 1.05rem;
+  }
+
+  .progress-track {
+    height: 7px;
+    margin: 12px 0;
   }
 
   .exam-date-field {
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+  }
+
+  .exam-date-field input {
+    min-height: 34px;
   }
 
   .question-card {
-    padding: 18px;
+    min-height: 0;
+    padding: 12px;
   }
 
   .question-card h2 {
-    font-size: 1.35rem;
+    margin: 10px 0 12px;
+    font-size: 1.12rem;
+    line-height: 1.35;
+  }
+
+  .answer-options {
+    gap: 8px;
+  }
+
+  .answer-option {
+    min-height: 0;
+    padding: 9px 10px;
+    font-size: 0.9rem;
+    line-height: 1.35;
   }
 
   .controls,
   .result-actions {
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: 12px;
   }
 
   .primary-btn,
